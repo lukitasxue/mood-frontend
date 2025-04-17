@@ -20,6 +20,19 @@
           <li><strong>Mood History:</strong> View all past mood predictions in a scrollable list.</li>
         </ul>
       </section>
+
+      <section class="variable-info">
+        <h2>Understanding the Inputs</h2>
+        <ul>
+          <li><strong>Sleep Hours:</strong> Number of hours you slept the night before. Optimal: ~8 hours.</li>
+          <li><strong>Stress Level:</strong> Rated from 0 (no stress) to 10 (extreme stress). Lower is better.</li>
+          <li><strong>Nutrition Quality:</strong> Rated from 0 (very poor diet) to 10 (perfectly healthy meals). Higher is better.</li>
+          <li><strong>Social Minutes:</strong> Time spent socializing in minutes (0 to 180). Balanced social interaction can improve mood.</li>
+          <li><strong>Water Liters:</strong> Amount of water consumed in liters (0–3L). Recommended: at least 2L/day.</li>
+        </ul>
+        <p><strong>Predicted Mood Score:</strong> A number between 1 and 10, where <strong>10</strong> represents the best possible mood, and <strong>1</strong> represents a very poor mood state.</p>
+      </section>
+
   
       <section class="graphs-info">
         <h2>Graph Insights</h2>
