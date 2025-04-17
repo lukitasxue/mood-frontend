@@ -13,7 +13,8 @@ import {
   LinearScale,
   PointElement
 } from 'chart.js'
-import RadarChart from './LifestyleRadarChart.vue';
+import RadarChart from './LifeStyleRadarChart.vue';
+
 import MoodBarChart from './MoodBarChart.vue'
 import { createRouter, createWebHistory, useRouter } from 'vue-router'
 import MenuPage from './MenuPage.vue'
