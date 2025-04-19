@@ -57,3 +57,37 @@ src/
   ├── router/          # Vue Router config
   ├── App.vue          # Main layout
   └── main.ts          # App entry point
+```
+
+## Getting Started Locally
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/lukitasxue/mood-frontend.git
+cd mood-frontend
+```
+
+### 2. Install dependencies:
+```bash
+npm install
+```
+
+### 3. Run the development server:
+```bash
+npm run dev
+```
+
+### 4. Visit the app:
+```
+http://localhost:5173
+```
+
+---
+
+## Backend Link
+Make sure your backend server (FastAPI) is running at `http://localhost:8000`. You can edit the `api.js` file to update the endpoint.
+
+---
+
+## 👨Author
+Lucas Hsueh - [@lukitasxue](https://github.com/lukitasxue)
