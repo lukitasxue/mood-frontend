@@ -4,6 +4,8 @@ An interactive web app built with **Vue 3**, **Vite**, and **manual CSS** that p
 
 [Backend Repo (FastAPI + ML Model)](https://github.com/lukitasxue/backend_moodPredPage)
 
+[Give it a try! (Mood predictor App link)](https://moodpredictorapp.netlify.app)
+
 ---
 
 ## About the App
