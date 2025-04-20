@@ -126,7 +126,7 @@ ul, ol {
 
 .tutorial-image {
   margin-top: 1.5rem;
-  max-width: 80%;
+  max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
