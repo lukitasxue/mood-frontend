@@ -3,7 +3,7 @@
     <h1>Welcome to the Mood Analyzer App</h1>
 
     <p class="delay-warning">
-      ⚠️ Note: The app may take up to 40 seconds to start due to free hosting startup time.
+      Note: The app may take up to 40 seconds to start due to free hosting startup time.
     </p>
 
     <section>
@@ -14,7 +14,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="tutorial-section">
       <h2>Quick Tutorial</h2>
       <ol>
         <li><strong>Back to Menu (Top-Left):</strong> Allows you to return to this main info page from anywhere in the app.</li>
@@ -31,6 +31,7 @@
           Explore how your mood changes over time, compare your habits to recommended values, and see which factors impact your mood most.
         </li>
       </ol>
+      <img src="/guide.jpg" alt="Tutorial Layout" class="tutorial-image" />
     </section>
 
     <section>
@@ -117,4 +118,19 @@ ul, ol {
 .start-button:hover {
   background-color: #a18aff;
 }
+
+.tutorial-section {
+  margin-bottom: 2rem;
+}
+
+
+.tutorial-image {
+  margin-top: 1.5rem;
+  max-width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+
 </style>
+
