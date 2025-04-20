@@ -1,101 +1,120 @@
-<!-- MenuPage.vue -->
 <template>
-    <div class="menu-container">
-      <h1>Welcome to the Mood Analyzer App</h1>
-  
-      <section class="intro">
-        <p>
-          This web app helps you track your daily habits and predict your mood using a multivariable linear regression model built from scratch with NumPy. 
-        </p>
-        <p>
-          You can log your lifestyle data manually by selecting a specific date, or generate random logs from a sample dataset. Each log contributes to a historical mood database that helps improve your predictions and insights.
-        </p>
-      </section>
-  
-      <section class="how-it-works">
-        <h2>How it Works</h2>
-        <ul>
-          <li><strong>Manual Logger:</strong> Input your daily habits like sleep, stress, water intake, etc.</li>
-          <li><strong>Auto Generator:</strong> Generate test logs for multiple days using sample data.</li>
-          <li><strong>Mood History:</strong> View all past mood predictions in a scrollable list.</li>
-        </ul>
-      </section>
+  <div class="menu-container">
+    <h1>Welcome to the Mood Analyzer App</h1>
 
-      <section class="variable-info">
-        <h2>Understanding the Inputs</h2>
-        <ul>
-          <li><strong>Sleep Hours:</strong> Number of hours you slept the night before. Optimal: ~8 hours.</li>
-          <li><strong>Stress Level:</strong> Rated from 0 (no stress) to 10 (extreme stress). Lower is better.</li>
-          <li><strong>Nutrition Quality:</strong> Rated from 0 (very poor diet) to 10 (perfectly healthy meals). Higher is better.</li>
-          <li><strong>Social Minutes:</strong> Time spent socializing in minutes (0 to 180). Balanced social interaction can improve mood.</li>
-          <li><strong>Water Liters:</strong> Amount of water consumed in liters (0–3L). Recommended: at least 2L/day.</li>
-        </ul>
-        <p><strong>Predicted Mood Score:</strong> A number between 1 and 10, where <strong>10</strong> represents the best possible mood, and <strong>1</strong> represents a very poor mood state.</p>
-      </section>
+    <p class="delay-warning">
+      ⚠️ Note: The app may take up to 40 seconds to start due to free hosting startup time.
+    </p>
 
-  
-      <section class="graphs-info">
-        <h2>Graph Insights</h2>
-        <ul>
-          <li><strong>Mood Trend:</strong> Visualize how your mood changes over time.</li>
-          <li><strong>Lifestyle Radar:</strong> Compare your lifestyle averages to recommended values.</li>
-          <li><strong>Impact Chart:</strong> See how each lifestyle factor affects your mood.</li>
-        </ul>
-        <p class="note">
-          🔍 For more accurate insights, we recommend logging at least one month of data.
-        </p>
-      </section>
-  
-      <button @click="goToApp" class="start-button">Enter the App</button>
-    </div>
-  </template>
-  
-  <script setup>
-  import { useRouter } from 'vue-router'
-  const router = useRouter()
-  
-  function goToApp() {
-    router.push('/analyzer') // Or wherever your app is mounted
-  }
-  </script>
-  
-  <style scoped>
-  .menu-container {
-    max-width: 700px;
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
-    color: white;
-  }
-  
-  .intro, .how-it-works, .graphs-info {
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-  
-  ul {
-    list-style: disc;
-    margin-left: 1.5rem;
-  }
-  
-  .note {
-    margin-top: 1rem;
-    font-style: italic;
-    color: #ccc;
-  }
-  
-  .start-button {
-    background-color: #8265f2;
-    color: white;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  .start-button:hover {
-    background-color: #a18aff;
-  }
-  </style>
-  
+    <section>
+      <h2>About This App</h2>
+      <p>
+        This web app lets you log your daily lifestyle habits and predicts your mood using a custom multivariable linear regression model (built from scratch using NumPy). 
+        You can manually enter data, generate mock logs, view your full prediction history, and analyze insights through graphs.
+      </p>
+    </section>
+
+    <section>
+      <h2>Quick Tutorial</h2>
+      <ol>
+        <li><strong>Back to Menu (Top-Left):</strong> Allows you to return to this main info page from anywhere in the app.</li>
+        <li>
+          <strong>Manual Mood Logger:</strong> Use the sliders to enter your daily data including sleep, stress, water, nutrition, and social interaction. 
+          When you click <em>Predict Mood</em>, the app will estimate your mood score based on your inputs.
+        </li>
+        <li>
+          <strong>Auto Log Generator + History:</strong> 
+          Use the <em>Generate Test Logs</em> button to create multiple entries between two dates for testing. The <em>Mood History</em> below it shows all your mood logs.
+        </li>
+        <li>
+          <strong>Graphs & Insights:</strong> 
+          Explore how your mood changes over time, compare your habits to recommended values, and see which factors impact your mood most.
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Input Variable Guide</h2>
+      <ul>
+        <li><strong>Sleep Hours:</strong> Number of hours slept last night. (~8 hours recommended)</li>
+        <li><strong>Stress Level:</strong> Ranges from 0 (no stress) to 10 (extreme stress). Lower is better.</li>
+        <li><strong>Nutrition Quality:</strong> Scored from 0 to 10 based on diet quality. Higher is better.</li>
+        <li><strong>Social Minutes:</strong> Minutes spent socializing (0–180). Balanced interaction improves mood.</li>
+        <li><strong>Water Liters:</strong> Water intake from 0 to 3L. Aim for at least 2L/day.</li>
+      </ul>
+      <p><strong>Predicted Mood Score:</strong> Ranges from 1 (very poor mood) to 10 (very good mood).</p>
+    </section>
+
+    <section>
+      <h2>Graph Insights</h2>
+      <ul>
+        <li><strong>Mood Trend:</strong> Line chart of mood changes over time.</li>
+        <li><strong>Lifestyle Radar:</strong> Compares your habits to recommended levels.</li>
+        <li><strong>Impact Chart:</strong> Shows how each input variable affects mood prediction.</li>
+      </ul>
+    </section>
+
+    <button @click="goToApp" class="start-button">Enter the App</button>
+  </div>
+</template>
+
+<script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+function goToApp() {
+  router.push('/analyzer')
+}
+</script>
+
+<style scoped>
+.menu-container {
+  max-width: 850px;
+  margin: auto;
+  padding: 2rem;
+  text-align: left;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  color: #a18aff;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.delay-warning {
+  font-style: italic;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.start-button {
+  display: block;
+  margin: 3rem auto 0 auto;
+  background-color: #8265f2;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.start-button:hover {
+  background-color: #a18aff;
+}
+</style>
